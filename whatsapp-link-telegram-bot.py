@@ -19,7 +19,7 @@ async def generate_whatsapp_link(update: Update, context: ContextTypes.DEFAULT_T
 # Main function to start the bot
 def main():
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-    application = Application.builder().token("YOUR_BOT_TOKEN").build()
+    application = Application.builder().token("7659328626:AAEKml-f5wjKbrWbNOyj23USqxkQ58VSTRk").build()
 
     # Command and message handlers
     application.add_handler(CommandHandler("start", start))

@@ -1,6 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 # Start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Welcome! Send me a phone number, and I'll generate a WhatsApp link for you.")
@@ -19,7 +20,7 @@ async def generate_whatsapp_link(update: Update, context: ContextTypes.DEFAULT_T
 # Main function to start the bot
 def main():
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-    application = Application.builder().token("7659328626:AAEKml-f5wjKbrWbNOyj23USqxkQ58VSTRk").build()
+    application = Application.builder().token(BOT_TOKEN).build()
 
     # Command and message handlers
     application.add_handler(CommandHandler("start", start))

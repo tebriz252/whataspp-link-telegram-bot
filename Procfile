@@ -1,1 +1,1 @@
-worker: python src/whatsapp-link-telegram-bot.py
+worker: python whatsapp-link-telegram-bot.py
